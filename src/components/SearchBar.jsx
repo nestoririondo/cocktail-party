@@ -16,15 +16,14 @@ const SearchBar = ({ handleSetCocktails }) => {
 
   return (
     <>
-    <input
-      className="search-bar"
-      type="text"
-      placeholder="Search for a cocktail..."
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-    <div className="filter-bar">
-
-    </div>
+      <input
+        autoFocus
+        className="search-bar"
+        type="text"
+        placeholder="Search for a cocktail..."
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <div className="filter-bar"></div>
     </>
   );
 };

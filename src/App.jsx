@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import Results from "./components/Results";
+import Footer from "./components/Footer";
 import "./App.css";
 
 const App = () => {
@@ -12,8 +13,11 @@ const App = () => {
 
   return (
     <div>
-      <SearchBar handleSetCocktails={handleSetCocktails} />
-      <Results cocktails={cocktails} />
+      <div className="content">
+        <SearchBar handleSetCocktails={handleSetCocktails} />
+        <Results cocktails={cocktails} />
+      </div>
+      <Footer />
     </div>
   );
 };
