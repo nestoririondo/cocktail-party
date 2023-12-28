@@ -5,6 +5,7 @@ const CocktailCard = ({ cocktail }) => {
     cocktail[`strIngredient${i}`]
       ? (ingredientsString += cocktail[`strIngredient${i}`] + ", ")
       : null;
+      
   }
   // Remove the last comma and space, then add a dot
   if (ingredientsString.endsWith(", ")) {
