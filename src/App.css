@@ -8,6 +8,10 @@ body {
   font-family: "Verdana", sans-serif;
   background-color: #383838;
 }
+a {
+  text-decoration: none;
+  color: #000000;
+}
 .content {
   min-height: 100vh;
 }
@@ -26,7 +30,7 @@ body {
   outline: none;
   border-radius: 10px;
   &:focus {
-    box-shadow: 0 0 50px rgba(156, 115, 13,0.3);
+    box-shadow: 0 0 50px rgba(156, 115, 13, 0.3);
   }
 }
 
@@ -47,7 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  justify-self: center; 
+  justify-self: center;
   width: 100%;
   max-width: 500px;
   height: 100%;
@@ -118,28 +122,88 @@ body {
 }
 
 .footer .contact {
-    font-size: 1rem;
-    font-weight: normal;
-    text-align: center;
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  text-align: center;
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
 }
 
-.footer .contact a{
-    color: #000000;
-    text-decoration: none;
-    &:hover{
-        color: #ffffff;
-    }
+.footer .contact a {
+  color: #000000;
+  text-decoration: none;
+  &:hover {
+    color: #ffffff;
+  }
 }
 
-.footer .contact img{
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1rem;
-    &:hover{
-        transform: scale(1.1);
-        filter: invert(1) brightness(1.8);
-    }
+.footer .contact img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  &:hover {
+    transform: scale(1.1);
+    filter: invert(1) brightness(1.8);
+  }
+}
+
+.cocktail-detail-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0 2rem 0;
+}
+
+.cocktail-detail {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #efbb38;
+  border-radius: 10px;
+  margin-top: 3rem;
+}
+
+.cocktail-detail > img {
+  width: 100%;
+  min-width: 300px;
+  flex: 1 1 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  /* it should not change aspect ratio when resizing windows */
+  object-fit: cover;
+}
+
+.cocktail-detail-info {
+  padding: 2rem;
+  flex: 1 0 50%;
+}
+
+.cocktail-detail-name {
+  font-size: 2rem;
+  letter-spacing: 0.1rem; /* Adjust this value as needed */
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.cocktail-detail-ingredients {
+  color: #414141;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+}
+
+.cocktail-detail-instructions {
+  color: #414141;
+  font-size: 1.25rem;
+}
+
+.back-btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #a4a4a4;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #efbb38;
+  }
 }
