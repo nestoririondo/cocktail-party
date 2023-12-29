@@ -19,9 +19,9 @@ a {
 .search-bar {
   display: block;
   padding: 1.5rem;
-  margin: 5% auto;
-  width: 30%;
-  min-width: 300px;
+  margin: 5rem auto;
+  width: 90%;
+  max-width: 400px;
   height: 50px;
   font-size: 1.5rem;
   background-color: #e7e7e7;
@@ -62,8 +62,11 @@ a {
   cursor: pointer;
   &:hover {
     transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.05s ease-in-out;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  }
+  &:active {
+    filter: brightness(120%);
   }
 }
 
@@ -73,7 +76,7 @@ a {
 
 .cocktail-name {
   font-size: 2rem;
-  letter-spacing: 0.1rem; /* Adjust this value as needed */
+  letter-spacing: 0.2rem; /* Adjust this value as needed */
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
@@ -160,6 +163,7 @@ a {
   background-color: #efbb38;
   border-radius: 10px;
   margin-top: 3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .cocktail-detail > img {
@@ -168,7 +172,6 @@ a {
   flex: 1 1 30%;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  /* it should not change aspect ratio when resizing windows */
   object-fit: cover;
 }
 
@@ -178,8 +181,8 @@ a {
 }
 
 .cocktail-detail-name {
-  font-size: 2rem;
-  letter-spacing: 0.1rem; /* Adjust this value as needed */
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
@@ -187,12 +190,12 @@ a {
 .cocktail-detail-ingredients {
   color: #414141;
   margin-bottom: 2rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .cocktail-detail-instructions {
   color: #414141;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
 }
 
 .back-btn {
@@ -205,5 +208,16 @@ a {
   cursor: pointer;
   &:hover {
     background-color: #efbb38;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .cocktail-detail > img {
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
   }
 }
