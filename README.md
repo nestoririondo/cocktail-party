@@ -1,9 +1,5 @@
-# React + Vite
+#Cocktail Party
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cocktail party is a web application built with React that allows users to search for cocktails by name. The application uses the <a href="https://www.thecocktaildb.com/api.php" target="_blank" rel="noreferrer">CocktailDB API</a> to fetch cocktail data.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# cocktail-party
+Deployed: https://nestoririondo.github.io/cocktail-party
