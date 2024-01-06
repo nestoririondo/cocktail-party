@@ -107,6 +107,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+  align-items: baseline;
 }
 
 .footer .about {
@@ -196,6 +197,7 @@ a {
 .cocktail-detail-instructions {
   color: #414141;
   font-size: 1.25rem;
+  line-height: 2;
 }
 
 .back-btn {

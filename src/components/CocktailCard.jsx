@@ -1,15 +1,7 @@
 import { Link } from "react-router-dom";
+import { ingredientsString } from '../utils/ingredientsString.js';
 
 const CocktailCard = ({ cocktail }) => {
-  let ingredientsString = "";
-
-  for (let i = 1; i < 10; i++) {
-    cocktail[`strIngredient${i}`]
-      ? (ingredientsString += cocktail[`strIngredient${i}`] + ", ")
-      : null;
-  }
-  // Remove the last comma and space, then add a dot
-  ingredientsString = ingredientsString.slice(0, -2) + ".";
 
   return (
     <Link to={`/cocktail/${cocktail.idDrink}`} state={cocktail}>
@@ -18,7 +10,7 @@ const CocktailCard = ({ cocktail }) => {
         <div className="cocktail-info">
           <p className="cocktail-name">{cocktail.strDrink}</p>
           <p className="cocktail-ingredients">
-            {ingredientsString ? ingredientsString : null}
+            {ingredientsString ? ingredientsString(cocktail) : null}
           </p>
         </div>
       </div>

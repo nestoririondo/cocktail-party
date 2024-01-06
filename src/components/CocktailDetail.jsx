@@ -1,5 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { ingredientsString } from '../utils/ingredientsString.js';
+
+const backButton = () => {
+  window.history.back();
+};
 
 const CocktailDetail = () => {
   const { id } = useParams();
@@ -16,22 +21,6 @@ const CocktailDetail = () => {
     return <div>Loading...</div>;
   }
 
-  let ingredientsString = "";
-  for (let i = 1; i < 10; i++) {
-    cocktail[`strIngredient${i}`]
-      ? (ingredientsString +=
-          cocktail[`strMeasure${i}`] +
-          " " +
-          cocktail[`strIngredient${i}`] +
-          ", ")
-      : null;
-  }
-  ingredientsString = ingredientsString.slice(0, -2) + ".";
-
-  const backButton = () => {
-    window.history.back();
-  };
-
   return (
     <div className="cocktail-detail-wrapper">
       <button className="back-btn" onClick={backButton}>Back</button>
@@ -43,7 +32,7 @@ const CocktailDetail = () => {
         />
         <div className="cocktail-detail-info">
         <p className="cocktail-detail-name">{cocktail.strDrink}</p>
-        <p className="cocktail-detail-ingredients">{ingredientsString}</p>
+        <p className="cocktail-detail-ingredients">{ingredientsString(cocktail)}</p>
         <p className="cocktail-detail-instructions">
           {cocktail.strInstructions}
         </p>
